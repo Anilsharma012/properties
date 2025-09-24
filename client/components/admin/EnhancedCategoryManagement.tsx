@@ -65,6 +65,7 @@ interface Category {
 
 export default function EnhancedCategoryManagement() {
   const { token } = useAuth();
+  const navigate = useNavigate();
   const [categories, setCategories] = useState<Category[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string>("");
