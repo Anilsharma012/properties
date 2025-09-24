@@ -210,6 +210,10 @@ function App() {
                   />
                   <Route
                     path="/admin/ads/categories/:categoryId/subcategories"
+                    element={<SubcategoriesPage />}
+                  />
+                  <Route
+                    path="/admin/ads/categories/:categoryId/subcategories"
                     element={<AdminSubcategoriesPage />}
                   />
                   <Route
