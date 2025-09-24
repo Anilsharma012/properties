@@ -85,6 +85,7 @@ import NetworkStatus from "./components/NetworkStatus";
 import AdsenseProvider from "./components/AdsenseProvider";
 import TitleSync from "./components/TitleSync";
 import DynamicPage from "./pages/DynamicPage";
+import AdminSubcategoriesPage from "./pages/AdminSubcategoriesPage";
 
 const queryClient = new QueryClient();
 
