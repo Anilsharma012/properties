@@ -601,9 +601,7 @@ export default function EnhancedCategoryManagement() {
                       <button
                         className="text-[#C70000] underline text-sm"
                         aria-label={`Manage subcategories for ${category.name}`}
-                        onClick={() =>
-                          (window.location.href = `/admin/categories/${category._id}/subcategories`)
-                        }
+                        onClick={() => navigate(`/admin/ads/categories/${category._id}/subcategories`)}
                       >
                         Manage Subcategories (
                         {(category.subcategories || []).length})
