@@ -46,6 +46,7 @@ import AgentDashboard from "./pages/AgentDashboard";
 import Admin from "./pages/Admin";
 import AdminLogin from "./pages/AdminLogin";
 import CategoriesPage from "./pages/CategoriesPage";
+import SubcategoriesPage from "./pages/SubcategoriesPage";
 import CountriesPage from "./pages/CountriesPage";
 import CategoryProperties from "./pages/CategoryProperties";
 import PropertyTypes from "./pages/PropertyTypes";
