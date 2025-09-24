@@ -124,6 +124,14 @@ export default function AdminSubcategoriesPage() {
     return filtered.slice(start, start + pageSize);
   }, [filtered, currentPage, pageSize]);
 
+  const pageNumbers = useMemo(() => {
+    const maxButtons = 7;
+    let start = Math.max(1, currentPage - 3);
+    let end = Math.min(totalPages, start + maxButtons - 1);
+    start = Math.max(1, end - maxButtons + 1);
+    return Array.from({ length: end - start + 1 }, (_, i) => start + i);
+  }, [currentPage, totalPages]);
+
   const openCreate = () => {
     setEditing(null);
     setForm({ name: "", slug: "", status: "active" });
@@ -373,6 +381,11 @@ export default function AdminSubcategoriesPage() {
                 <Button variant="outline" size="icon" disabled={currentPage === 1} onClick={() => setPage((p) => Math.max(1, p - 1))}>
                   <ChevronLeft className="h-4 w-4" />
                 </Button>
+                {pageNumbers.map((n) => (
+                  <Button key={n} variant={n === currentPage ? "default" : "outline"} size="sm" onClick={() => setPage(n)}>
+                    {n}
+                  </Button>
+                ))}
                 <Button variant="outline" size="icon" disabled={currentPage === totalPages} onClick={() => setPage((p) => Math.min(totalPages, p + 1))}>
                   <ChevronRight className="h-4 w-4" />
                 </Button>
