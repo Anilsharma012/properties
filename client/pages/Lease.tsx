@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import OLXStyleHeader from "../components/OLXStyleHeader";
-import CategoryBar from "../components/CategoryBar";
 import BottomNavigation from "../components/BottomNavigation";
 import StaticFooter from "../components/StaticFooter";
 
@@ -120,40 +119,12 @@ export default function Lease() {
       <OLXStyleHeader />
 
       <main className="pb-16">
-        <CategoryBar />
-
         <div className="px-4 py-6">
           <div className="mb-6">
             <h1 className="text-2xl font-bold text-gray-800 mb-2">
               Lease Properties
             </h1>
             <p className="text-gray-600">Choose a property type for lease</p>
-          </div>
-
-          <div className="grid grid-cols-2 gap-3">
-            {subcategories.map((subcategory) => (
-              <button
-                key={subcategory._id || subcategory.id || subcategory.slug}
-                onClick={() => handleSubcategoryClick(subcategory)}
-                className="subcat-card bg-white border border-gray-200 rounded-lg p-4 text-left hover:bg-gray-50 transition-colors shadow-sm"
-                data-testid="subcat-card"
-              >
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="font-semibold text-gray-900 text-lg">
-                    {subcategory.name}
-                  </h3>
-                  <ChevronRight className="h-5 w-5 text-gray-400" />
-                </div>
-                <p className="text-sm text-gray-500 mb-3">
-                  {subcategory.description}
-                </p>
-                {subcategory.count && (
-                  <span className="text-xs bg-[#C70000] text-white px-2 py-1 rounded-full">
-                    {subcategory.count} properties
-                  </span>
-                )}
-              </button>
-            ))}
           </div>
         </div>
       </main>
