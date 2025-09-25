@@ -1,5 +1,4 @@
 import OLXStyleHeader from "../components/OLXStyleHeader";
-import CategoryBar from "../components/CategoryBar";
 import OLXStyleListings from "../components/OLXStyleListings";
 import PWAInstallPrompt from "../components/PWAInstallPrompt";
 import BottomNavigation from "../components/BottomNavigation";
@@ -10,7 +9,6 @@ export default function OLXStyleIndex() {
       <OLXStyleHeader />
 
       <main className="pb-16">
-        <CategoryBar />
         <OLXStyleListings />
       </main>
 
