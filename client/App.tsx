@@ -46,6 +46,7 @@ import AgentDashboard from "./pages/AgentDashboard";
 import Admin from "./pages/Admin";
 import AdminLogin from "./pages/AdminLogin";
 import CategoriesPage from "./pages/CategoriesPage";
+import SubcategoriesPage from "./pages/SubcategoriesPage";
 import CountriesPage from "./pages/CountriesPage";
 import CategoryProperties from "./pages/CategoryProperties";
 import PropertyTypes from "./pages/PropertyTypes";
@@ -85,6 +86,7 @@ import NetworkStatus from "./components/NetworkStatus";
 import AdsenseProvider from "./components/AdsenseProvider";
 import TitleSync from "./components/TitleSync";
 import DynamicPage from "./pages/DynamicPage";
+import AdminSubcategoriesPage from "./pages/AdminSubcategoriesPage";
 
 const queryClient = new QueryClient();
 
@@ -205,6 +207,26 @@ function App() {
                   <Route
                     path="/admin/ads/categories"
                     element={<CategoriesPage />}
+                  />
+                  <Route
+                    path="/admin/ads/categories/:categoryId/subcategories"
+                    element={<SubcategoriesPage />}
+                  />
+                  <Route
+                    path="/admin/ads/categories/:categoryId/subcategories"
+                    element={<AdminSubcategoriesPage />}
+                  />
+                  <Route
+                    path="/admin/ads/categories/:categoryId/subcategories/*"
+                    element={<AdminSubcategoriesPage />}
+                  />
+                  <Route
+                    path="/admin/categories/:categoryId/subcategories"
+                    element={<AdminSubcategoriesPage />}
+                  />
+                  <Route
+                    path="/admin/categories/:categoryId/subcategories/*"
+                    element={<AdminSubcategoriesPage />}
                   />
                   <Route
                     path="/admin/locations/countries"

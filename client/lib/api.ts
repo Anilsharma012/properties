@@ -121,7 +121,8 @@ export const createApiUrl = (endpoint: string): string => {
 // ---------- helpers ----------
 const getStoredToken = (): string | null => {
   try {
-    return localStorage.getItem("token");
+    // Prefer adminToken for admin pages, fallback to user token
+    return localStorage.getItem("adminToken") || localStorage.getItem("token");
   } catch {
     return null;
   }

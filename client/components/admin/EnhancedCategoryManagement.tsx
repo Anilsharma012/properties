@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 import {
   Layers,
@@ -64,6 +65,7 @@ interface Category {
 
 export default function EnhancedCategoryManagement() {
   const { token } = useAuth();
+  const navigate = useNavigate();
   const [categories, setCategories] = useState<Category[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string>("");
@@ -600,9 +602,7 @@ export default function EnhancedCategoryManagement() {
                       <button
                         className="text-[#C70000] underline text-sm"
                         aria-label={`Manage subcategories for ${category.name}`}
-                        onClick={() =>
-                          (window.location.href = `/admin/ads/categories/${category._id}/subcategories`)
-                        }
+                        onClick={() => navigate(`/admin/ads/categories/${category._id}/subcategories`)}
                       >
                         Manage Subcategories (
                         {(category.subcategories || []).length})
