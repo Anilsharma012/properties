@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import OLXStyleHeader from "../components/OLXStyleHeader";
-import CategoryBar from "../components/CategoryBar";
 import BottomNavigation from "../components/BottomNavigation";
 import StaticFooter from "../components/StaticFooter";
 
@@ -132,7 +131,6 @@ export default function Buy() {
       <OLXStyleHeader />
 
       <main className="pb-16">
-        <CategoryBar />
 
         <div className="px-4 py-6">
           {/* Header */}
