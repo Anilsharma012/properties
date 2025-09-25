@@ -114,7 +114,6 @@ export default function PG() {
       <OLXStyleHeader />
 
       <main className="pb-16">
-
         <div className="px-4 py-6">
           <div className="mb-6">
             <h1 className="text-2xl font-bold text-gray-800 mb-2">
@@ -122,7 +121,6 @@ export default function PG() {
             </h1>
             <p className="text-gray-600">Choose accommodation type</p>
           </div>
-
         </div>
       </main>
 

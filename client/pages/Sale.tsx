@@ -128,7 +128,6 @@ export default function Sale() {
       <OLXStyleHeader />
 
       <main className="pb-16">
-
         <div className="px-4 py-6">
           <div className="mb-6">
             <h1 className="text-2xl font-bold text-gray-800 mb-2">
@@ -136,7 +135,6 @@ export default function Sale() {
             </h1>
             <p className="text-gray-600">Choose a property type to sell</p>
           </div>
-
         </div>
       </main>
 

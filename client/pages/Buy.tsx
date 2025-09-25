@@ -131,7 +131,6 @@ export default function Buy() {
       <OLXStyleHeader />
 
       <main className="pb-16">
-
         <div className="px-4 py-6">
           {/* Header */}
           <div className="mb-6">
@@ -140,7 +139,6 @@ export default function Buy() {
             </h1>
             <p className="text-gray-600">Choose a property type to buy</p>
           </div>
-
         </div>
       </main>
 
