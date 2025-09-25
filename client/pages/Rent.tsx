@@ -137,31 +137,6 @@ export default function Rent() {
             <p className="text-gray-600">Choose a property type to rent</p>
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
-            {subcategories.map((subcategory) => (
-              <button
-                key={subcategory._id || subcategory.id || subcategory.slug}
-                onClick={() => handleSubcategoryClick(subcategory)}
-                className="subcat-card bg-white border border-gray-200 rounded-lg p-4 text-left hover:bg-gray-50 transition-colors shadow-sm"
-                data-testid="subcat-card"
-              >
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="font-semibold text-gray-900 text-lg">
-                    {subcategory.name}
-                  </h3>
-                  <ChevronRight className="h-5 w-5 text-gray-400" />
-                </div>
-                <p className="text-sm text-gray-500 mb-3">
-                  {subcategory.description}
-                </p>
-                {subcategory.count && (
-                  <span className="text-xs bg-[#C70000] text-white px-2 py-1 rounded-full">
-                    {subcategory.count} properties
-                  </span>
-                )}
-              </button>
-            ))}
-          </div>
         </div>
       </main>
 
